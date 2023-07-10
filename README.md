@@ -1,3 +1,11 @@
+## Site Hosting
+Site is hosted at: https://candidatewebsite-a2391.web.app/
+
+## Firebase Hosting
+This project uses Github Actions for Firebase for hosting --> https://github.com/marketplace/actions/github-action-for-firebase
+
+
+## Angular
 # CandidateWebsite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
