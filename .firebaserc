@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "https://candidatewebsite-a2391.web.app/ --project=default"
+    "default": "candidatewebsite-a2391 --project=default"
   }
 }
