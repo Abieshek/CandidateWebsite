@@ -81,12 +81,13 @@ section img {
     z-index: 2;
 }
 
-#star {
-    top: 100px;
-    left: 100px;
-    width: 150px;
-    height: 150px;
+#bird {
+    top: 5.1vh;
+    left: 5.1vw;
+    width: 10.1vw;
+    height: 10.1vh;
     z-index: 3;
+    overflow: visible;
 }
 
 /* Animation Code */
@@ -98,10 +99,6 @@ section img {
         left: 0%;
     }
 }
-
-
-
-
 
 
 

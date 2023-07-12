@@ -25,13 +25,16 @@ export class AppComponent {
 
   // Parallax Animation
   parallaxAnimation() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
     let layer1: any = document.getElementById("layer1");
     let layer2: any = document.getElementById("layer2");
     let layer3: any = document.getElementById("layer3");
     let layer4: any = document.getElementById("layer4");
     let layer5: any = document.getElementById("layer5");
     let text: any = document.getElementById("tw1");
-    let star: any = document.getElementById("star");
+    let bird: any = document.getElementById("bird");
   
     window.addEventListener('scroll', function() {
         var value = window.scrollY;
@@ -51,9 +54,10 @@ export class AppComponent {
 
         text.style.top = value * 1 + 'px';
 
-        star.style.top = 100 + value * 1 + 'px' ;
-        star.style.left = 100 + value * 2 + 'px' ;
+        bird.style.top = (width*5.1/100) + value * 1 + 'px' ;
+        bird.style.left = (height*5.1/100) + value * 2 + 'px' ;
     })
+
   }
 
 
@@ -110,7 +114,7 @@ export class AppComponent {
       .type('Spring')
       .rest(500)
       .remove(27)
-      .type('Thanks for visitng my site!')
+      .type('Thanks for visiting my site!')
       .rest(2000)
       .changeOps({ deleteSpeed: 40 })
       .clear()
