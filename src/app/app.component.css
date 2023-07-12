@@ -54,10 +54,12 @@ section img {
     position: absolute;
     top: 85%;
     left: 50%;
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 10.1vh;
     z-index: 2000;
-    transform: rotate(90deg);
+    overflow: visible;
+    margin: auto;
+    transform: rotate(90deg) translate(0,50%);
 }
 
 
@@ -71,6 +73,7 @@ section img {
     z-index: 1;
     display: inline-block;
     padding: 0.5vw 1vw;
+ 
 }
 
 #layer5 {
