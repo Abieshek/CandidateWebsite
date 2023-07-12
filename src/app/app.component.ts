@@ -79,7 +79,7 @@ export class AppComponent {
       .type('Spring')
       .rest(500)
       .remove(27)
-      .changeTypeColor('blue')
+      .changeTypeColor('white')
       .type('Thanks for visitng my site!')
       .rest(2000)
       .changeOps({ deleteSpeed: 40 })
