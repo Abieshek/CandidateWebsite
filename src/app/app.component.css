@@ -6,12 +6,6 @@ body {
     color: #fff;
 }
 
-.parallax-window {
-	min-height: 400px;
-	background: transparent;
-}
-
-
 /* Text Container */
 .container {
     height: 100vh;
@@ -23,19 +17,27 @@ body {
     overflow: hidden;
 }
 
-/* Text Styling */
-.container .text {
+/* Typewriter Text */
+.tw1 {
+    position: relative;
+    color:#ccc;
+    font-size: 50px;
+    font-weight: 600;
+}
+.tw2 {
     position: relative;
     color:#ccc;
     font-size: 50px;
     font-weight: 600;
 }
 
-/* Color of Important Text */
-.highlighted-text {
-    font-weight: bold;
-    color: #dd7732;
-}
+
+
+
+
+
+
+
 
 /* Animation of Typing */
 .container .text.display:before {
