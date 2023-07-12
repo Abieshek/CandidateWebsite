@@ -69,7 +69,7 @@ export class AppComponent {
     
     writer
       .changeTypeColor('white')
-      .type('My name is Abieshek Subramaniam.')
+      .type('My name is Abieshek.')
       .rest(2000)
       .changeOps({ deleteSpeed: 20 })
       .remove(43)
