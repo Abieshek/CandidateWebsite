@@ -31,6 +31,7 @@ export class AppComponent {
     let layer4: any = document.getElementById("layer4");
     let layer5: any = document.getElementById("layer5");
     let text: any = document.getElementById("tw1");
+    let arrow: any = document.getElementById("arrow");
   
     window.addEventListener('scroll', function() {
         var value = window.scrollY;
@@ -47,7 +48,9 @@ export class AppComponent {
 
         layer5.style.top = value * 0.2 + 'px';
         layer5.style.left = -value * 0.03 + 'px';
+
         text.style.top = value * 1 + 'px';
+        arrow.style.top = value * .5 + 'px';
     })
   }
 

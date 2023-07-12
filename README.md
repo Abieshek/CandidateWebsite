@@ -5,6 +5,10 @@ Site is hosted at: https://candidatewebsite-a2391.web.app/
 This project uses Github Actions for Firebase for hosting --> https://github.com/marketplace/actions/github-action-for-firebase
 
 
+# Credits
+Parallax Background City Image: https://free-game-assets.itch.io/free-city-backgrounds-pixel-art?download
+
+
 ## Angular
 # CandidateWebsite
 
