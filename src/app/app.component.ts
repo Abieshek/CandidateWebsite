@@ -35,7 +35,6 @@ export class AppComponent {
     window.addEventListener('scroll', function() {
         var value = window.scrollY;
         layer1.style.top = value * 0.7 + 'px';
-        layer1.style.left = value * 0.01 + 'px';
 
         layer2.style.top = value * 0.5 + 'px';
         layer2.style.left = value * 0.03 + 'px';
