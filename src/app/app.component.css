@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2b323c;
+    color: #fff;
+}
+
+.parallax-window {
+	min-height: 400px;
+	background: transparent;
+}
+
+
+/* Text Container */
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5 rem;
+    overflow: hidden;
+}
+
+/* Text Styling */
+.container .text {
+    position: relative;
+    color:#ccc;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+/* Color of Important Text */
+.highlighted-text {
+    font-weight: bold;
+    color: #dd7732;
+}
+
+/* Animation of Typing */
+.container .text.display:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2b323c;
+    border-left: 2px solid #ccc;
+    animation: animate 4s steps(43) infinite;
+}
+
+/* Animation Code */
+@keyframes animate{
+    40%, 60% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
