@@ -50,7 +50,6 @@ export class AppComponent {
         layer5.style.left = -value * 0.03 + 'px';
 
         text.style.top = value * 1 + 'px';
-        arrow.style.top = value * .5 + 'px';
     })
   }
 
