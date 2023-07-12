@@ -52,10 +52,10 @@ export class AppComponent {
         layer5.style.top = value * 0.2 + 'px';
         layer5.style.left = -value * 0.03 + 'px';
 
-        text.style.top = value * 1 + 'px';
+        text.style.top = value * .9 + 'px';
 
-        bird.style.top = (width*5.1/100) + value * 1 + 'px' ;
-        bird.style.left = (height*5.1/100) + value * 2 + 'px' ;
+        bird.style.top = (height*5.1/100) + value * 1 + 'px' ;
+        bird.style.left = (width*5.1/100) + value * 2 + 'px' ;
     })
 
   }
