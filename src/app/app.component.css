@@ -66,9 +66,11 @@ section img {
 #tw1 {
     position: relative;
     color:#ccc;
-    font-size: 100px;
+    font-size: 4.2vw;
     font-weight: 600;
     z-index: 1;
+    display: inline-block;
+    padding: 0.5vw 1vw;
 }
 
 #layer5 {
@@ -80,7 +82,6 @@ section img {
 }
 
 #star {
-    
     top: 100px;
     left: 100px;
     width: 150px;
@@ -88,6 +89,15 @@ section img {
     z-index: 3;
 }
 
+/* Animation Code */
+@keyframes animate{
+    40%, 60% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
 
 
 
@@ -111,12 +121,3 @@ section img {
     animation: animate 4s steps(43) infinite;
 }
 
-/* Animation Code */
-@keyframes animate{
-    40%, 60% {
-        left: 100%;
-    }
-    100% {
-        left: 0%;
-    }
-}
