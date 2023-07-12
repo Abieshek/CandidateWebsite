@@ -40,13 +40,13 @@ export class AppComponent {
         layer2.style.top = value * 0.5 + 'px';
         layer2.style.left = value * 0.03 + 'px';
 
-        layer3.style.top = value * 0.3 + 'px';
+        layer3.style.top = value * 0.4 + 'px';
         layer3.style.left = -value * 0.03 + 'px';
 
-        layer4.style.top = value * 0.2 + 'px';
+        layer4.style.top = value * 0.3 + 'px';
         layer4.style.left = value * 0.03 + 'px';
 
-        layer5.style.top = value * 0.1 + 'px';
+        layer5.style.top = value * 0.2 + 'px';
         layer5.style.left = -value * 0.03 + 'px';
         text.style.top = value * 1 + 'px';
     })
