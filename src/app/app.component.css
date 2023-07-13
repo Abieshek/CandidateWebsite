@@ -93,31 +93,108 @@ section img {
     overflow: visible;
 }
 
-/* Animation Code */
-@keyframes animate{
-    40%, 60% {
-        left: 100%;
+
+
+
+.timeline {
+    position: relative;
+    max-width: 100vw;
+    padding: 2.2vh 2.2vw;
+    
+}
+
+.container {
+    padding: 2.2vh 4.7vw;
+    position: relative;
+    width: 50%;
+    animation: animatemovedown 1s linear forwards;
+    z-index: 1;
+    opacity: 0;
+}
+@keyframes animatemovedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
     }
-    100% {
-        left: 0%;
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 
+.text-box {
+    padding: 2.2vw 2.2vh;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 2.2vw;
+}
 
+.left-container {
+    left: 0;
+}
 
+.right-container {
+    left: 50%;
+}
 
-/* OLD CODE */
+ #logo {
+    position: absolute;
+    width: 5vw;
+    border-radius: 50%;
+    right: -2.6vw;
+    top: 5vh;
+    z-index: 3;
+}
 
-/* Animation of Typing */
-.container .text.display:before {
-    content: "";
+.right-container #logo {
+    left: -2.6vw;
+}
+
+.timeline:after {
+    content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    width: 1vw;
     height: 100%;
-    width: 100%;
-    background-color: #2b323c;
-    border-left: 2px solid #ccc;
-    animation: animate 4s steps(43) infinite;
+    background: #fff;
+    margin-left: -0.4vw;
+    z-index: 0;
+    animation: animateline 6s linear forwards;
+}
+
+@keyframes animateline {
+    0% {
+        height: 0;
+        
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 3.2vh;
+    z-index: 1;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-left: 1.2vw solid white;
+    right: -1.1vw;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 3.2vh;
+    z-index: 1;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-right: 1.2vw solid white;
+    left: -1.1vw;
 }
 
