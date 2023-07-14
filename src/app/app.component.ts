@@ -17,7 +17,15 @@ export class AppComponent {
     this.typeAnimation();
     this.parallaxAnimation1();
     this.parallaxAnimation2();
+    this.mouseScroll();
   }
+
+  // Mouse Scroll Animation
+  mouseScroll() {
+    let mouse:any = document.getElementById("mouse");
+    mouse.addClass("visible");
+  }
+  
 
   // Parallax Animation for the City
   parallaxAnimation1() {
@@ -34,14 +42,14 @@ export class AppComponent {
   
     window.addEventListener('scroll', function() {
         var value = window.scrollY;
-        layer1.style.top = value * 0.7 + 'px';
+        layer1.style.top = value * 0.9 + 'px';
 
         layer2.style.top = value * 0.5 + 'px';
         layer2.style.left = value * 0.7 + 'px';
 
-        layer3.style.top = value * 0.5 + 'px';
+        layer3.style.top = value * 0.6 + 'px';
    
-        layer4.style.top = value * 0.3 + 'px';
+        layer4.style.top = value * 0.5 + 'px';
         
         text.style.top = value * .9 + 'px';
     })
@@ -54,7 +62,8 @@ export class AppComponent {
       const width = window.innerWidth;
       const height = window.innerHeight;
 
-      if (window.scrollY >= .90*height) {
+      if (window.scrollY >= .8*height) {
+        let layer1: any = document.getElementById("image1-layer2");
         let layer2: any = document.getElementById("image2-layer2");
         let layer3: any = document.getElementById("image2-layer3");
         let layer4: any = document.getElementById("image2-layer4");
@@ -62,21 +71,20 @@ export class AppComponent {
         let bird: any = document.getElementById("bird");
         
           var value = window.scrollY;
-     
 
-          layer2.style.top = (value-.90*height) * 0.6 + 'px' ;
-          layer2.style.left = (value-.90*height) * 0.03 + 'px';
-    
-          layer3.style.top = (value-.90*height) * 0.5 + 'px';
-          layer3.style.left = -(value-.90*height) * 0.03 + 'px';
-    
-          layer4.style.top = (value-.90*height) * 0.4 + 'px';
-          layer4.style.left = (value-.90*height) * 0.03 + 'px';
-    
-          layer5.style.top = (value-.90*height) * 0.3 + 'px';
-          layer5.style.left = -(value-.90*height) * 0.03 + 'px';
+        
 
-          
+          layer2.style.top = (value-.8*height) * 0.6 + 'px' ;
+          layer2.style.left = (value-.8*height) * 0.03 + 'px';
+    
+          layer3.style.top = (value-.8*height) * 0.5 + 'px';
+          layer3.style.left = -(value-.8*height) * 0.03 + 'px';
+    
+          layer4.style.top = (value-.8*height) * 0.4 + 'px';
+          layer4.style.left = (value-.8*height) * 0.03 + 'px';
+    
+          layer5.style.top = (value-.8*height) * 0.3 + 'px';
+          layer5.style.left = -(value-.8*height) * 0.03 + 'px';
       }
     })
   }
