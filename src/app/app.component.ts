@@ -12,19 +12,15 @@ import Typewriter from 't-writer.js';
   styleUrls: ['./app.component.css']
 })
 
-
-
-
-
 export class AppComponent {
-
   ngOnInit() {
     this.typeAnimation();
-    this.parallaxAnimation();
+    this.parallaxAnimation1();
+    this.parallaxAnimation2();
   }
 
-  // Parallax Animation
-  parallaxAnimation() {
+  // Parallax Animation for the City
+  parallaxAnimation1() {
     const width = window.innerWidth;
     const height = window.innerHeight;
 
@@ -32,35 +28,55 @@ export class AppComponent {
     let layer2: any = document.getElementById("layer2");
     let layer3: any = document.getElementById("layer3");
     let layer4: any = document.getElementById("layer4");
-    let layer5: any = document.getElementById("layer5");
+
     let text: any = document.getElementById("tw1");
-    let bird: any = document.getElementById("bird");
+
   
     window.addEventListener('scroll', function() {
         var value = window.scrollY;
         layer1.style.top = value * 0.7 + 'px';
 
         layer2.style.top = value * 0.5 + 'px';
-        layer2.style.left = value * 0.03 + 'px';
+        layer2.style.left = value * 0.7 + 'px';
 
-        layer3.style.top = value * 0.4 + 'px';
-        layer3.style.left = -value * 0.03 + 'px';
-
+        layer3.style.top = value * 0.5 + 'px';
+   
         layer4.style.top = value * 0.3 + 'px';
-        layer4.style.left = value * 0.03 + 'px';
-
-        layer5.style.top = value * 0.2 + 'px';
-        layer5.style.left = -value * 0.03 + 'px';
-
+        
         text.style.top = value * .9 + 'px';
-
-        bird.style.top = (height*5.1/100) + value * 1 + 'px' ;
-        bird.style.left = (width*5.1/100) + value * 2 + 'px' ;
     })
-
   }
 
 
+  // Parallax Animation for the Timeline Section
+  parallaxAnimation2() {
+    window.addEventListener('scroll', function() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      if (window.scrollY >= height) {
+        let layer1: any = document.getElementById("image2-layer1");
+        let layer2: any = document.getElementById("image2-layer2");
+        let layer3: any = document.getElementById("image2-layer3");
+        let layer4: any = document.getElementById("image2-layer4");
+        let layer5: any = document.getElementById("image2-layer5");
+        
+          var value = window.scrollY;
+          layer1.style.top =  (value-height) * 0.7 + 'px';
+          layer2.style.top = (value-height) * 0.5 + 'px' ;
+          layer2.style.left = (value-height) * 0.03 + 'px';
+    
+          layer3.style.top = (value-height) * 0.4 + 'px';
+          layer3.style.left = -(value-height) * 0.03 + 'px';
+    
+          layer4.style.top = (value-height) * 0.3 + 'px';
+          layer4.style.left = (value-height) * 0.03 + 'px';
+    
+          layer5.style.top = (value-height) * 0.2 + 'px';
+          layer5.style.left = -(value-height) * 0.03 + 'px';
+      }
+    })
+  }
 
   // Type Writer Library Implementation
     // TypeWriter: https://github.com/ChrisCavs/t-writer.js#changecursorcolor-color
@@ -119,8 +135,6 @@ export class AppComponent {
       .changeOps({ deleteSpeed: 40 })
       .clear()
       .start()
-
-
   }
 
 }
