@@ -54,26 +54,29 @@ export class AppComponent {
       const width = window.innerWidth;
       const height = window.innerHeight;
 
-      if (window.scrollY >= height) {
-        let layer1: any = document.getElementById("image2-layer1");
+      if (window.scrollY >= .90*height) {
         let layer2: any = document.getElementById("image2-layer2");
         let layer3: any = document.getElementById("image2-layer3");
         let layer4: any = document.getElementById("image2-layer4");
         let layer5: any = document.getElementById("image2-layer5");
+        let bird: any = document.getElementById("bird");
         
           var value = window.scrollY;
-          layer1.style.top =  (value-height) * 0.7 + 'px';
-          layer2.style.top = (value-height) * 0.5 + 'px' ;
-          layer2.style.left = (value-height) * 0.03 + 'px';
+     
+
+          layer2.style.top = (value-.90*height) * 0.6 + 'px' ;
+          layer2.style.left = (value-.90*height) * 0.03 + 'px';
     
-          layer3.style.top = (value-height) * 0.4 + 'px';
-          layer3.style.left = -(value-height) * 0.03 + 'px';
+          layer3.style.top = (value-.90*height) * 0.5 + 'px';
+          layer3.style.left = -(value-.90*height) * 0.03 + 'px';
     
-          layer4.style.top = (value-height) * 0.3 + 'px';
-          layer4.style.left = (value-height) * 0.03 + 'px';
+          layer4.style.top = (value-.90*height) * 0.4 + 'px';
+          layer4.style.left = (value-.90*height) * 0.03 + 'px';
     
-          layer5.style.top = (value-height) * 0.2 + 'px';
-          layer5.style.left = -(value-height) * 0.03 + 'px';
+          layer5.style.top = (value-.90*height) * 0.3 + 'px';
+          layer5.style.left = -(value-.90*height) * 0.03 + 'px';
+
+          
       }
     })
   }
