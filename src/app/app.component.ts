@@ -63,16 +63,16 @@ export class AppComponent {
       const height = window.innerHeight;
 
       if (window.scrollY >= .8*height) {
-        let layer1: any = document.getElementById("image1-layer2");
+        let layer1: any = document.getElementById("image2-layer1");
         let layer2: any = document.getElementById("image2-layer2");
         let layer3: any = document.getElementById("image2-layer3");
         let layer4: any = document.getElementById("image2-layer4");
         let layer5: any = document.getElementById("image2-layer5");
-        let bird: any = document.getElementById("bird");
-        
-          var value = window.scrollY;
+          // let bird: any = document.getElementById("bird");
 
-        
+          var value = window.scrollY;
+          layer1.style.top = (value-.8*height) * 0.1 + 'px' ;
+
 
           layer2.style.top = (value-.8*height) * 0.6 + 'px' ;
           layer2.style.left = (value-.8*height) * 0.03 + 'px';
@@ -85,7 +85,10 @@ export class AppComponent {
     
           layer5.style.top = (value-.8*height) * 0.3 + 'px';
           layer5.style.left = -(value-.8*height) * 0.03 + 'px';
+
+          
       }
+
     })
   }
 
