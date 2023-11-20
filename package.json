@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^16.1.0",
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
+    "animate.css": "^4.1.1",
     "jquery": "^3.7.0",
     "jquery-parallax.js": "^1.5.0",
     "ngx-typed-js": "^2.1.1",

@@ -6,6 +6,7 @@ import Typewriter from 't-writer.js';
 
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,15 +18,30 @@ export class AppComponent {
     this.typeAnimation();
     this.parallaxAnimation1();
     this.parallaxAnimation2();
-    this.mouseScroll();
+    this.timelineAnimation();
   }
 
-  // Mouse Scroll Animation
-  mouseScroll() {
-    let mouse:any = document.getElementById("mouse");
-    mouse.addClass("visible");
+  // Timeline Animation
+  timelineAnimation() {
+    let items = document.querySelectorAll(".item");
+    let observer =  new IntersectionObserver(entries => {
+      console.log(entries)
+      entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+        }
+      }) 
+    }, 
+    {
+      threshold: 1,
+    }
+    )
+    items.forEach(item => {
+      observer.observe(item);
+    })
   }
-  
+
 
   // Parallax Animation for the City
   parallaxAnimation1() {
@@ -108,6 +124,9 @@ export class AppComponent {
     
     writer
       .changeTypeColor('white')
+      .type('Hello!')
+      .rest(2000)
+      .remove(6)
       .type('My name is Abieshek.')
       .rest(2000)
       .changeOps({ deleteSpeed: 20 })
