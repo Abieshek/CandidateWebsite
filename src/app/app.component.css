@@ -5,7 +5,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background: #0a2a43;
-    min-height: 6000px;
+    min-height: 300vh;
 }
 
 /********************************************Sky Section******************************* */
@@ -208,21 +208,38 @@ body {
 
 /* Final Section */
 #finalSection {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
+    padding-top: 3%;
 }
 
-.resume {
-    position: relative;
+
+
+#icon {
+    width: 8vw;
+    z-index: 3;
+    padding: 1%;
+}
+
+#icon:hover {
+    transform: scale(1.3)
+}
+
+#finalSectionLabels {
+    text-align: center;
     color:#ccc;
-    font-size: 4.2vw;
+    font-size: 3.2vw;
     font-weight: 600;
-    z-index: 1;
-    display: inline-block;
-    padding: 0.5vw 1vw;
+}
+#icons {
+    padding-bottom: 3%;
+}
+#additionalLinks {
+    display:flex;
+    z-index: 3;
+    justify-content: center;
+}
+
+#linkIcon {
+    width: 20vw;
+    z-index: 3;
+    padding: 19%;
 }
